@@ -5,8 +5,11 @@ using Photon.Pun;
 
 public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
+    #region _VARIABLE
     private GameObject spawnedPlayerPrefab;
+    #endregion
 
+    #region _OVERRIDE FUNCTION
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
@@ -18,4 +21,5 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
         base.OnLeftRoom();
         PhotonNetwork.Destroy(spawnedPlayerPrefab);
     }
+    #endregion
 }
