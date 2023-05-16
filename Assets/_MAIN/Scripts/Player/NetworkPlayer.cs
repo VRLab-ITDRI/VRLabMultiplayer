@@ -38,7 +38,7 @@ public class NetworkPlayer : MonoBehaviour
         {
             foreach (var item in GetComponentsInChildren<Renderer>())
             {
-                item.enabled = false;
+                //item.enabled = false;
             }
         }
     }
@@ -82,8 +82,7 @@ public class NetworkPlayer : MonoBehaviour
     #region _FUNCTION
     void MapPosition(Transform target, Transform rigTransform)
     {
-        target.position = rigTransform.position;
-        target.rotation = rigTransform.rotation;
+        target.SetPositionAndRotation(rigTransform.position, rigTransform.rotation);
     }
     #endregion
 }

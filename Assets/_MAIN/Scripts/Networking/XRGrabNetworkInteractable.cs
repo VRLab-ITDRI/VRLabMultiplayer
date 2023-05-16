@@ -25,7 +25,7 @@ public class XRGrabNetworkInteractable : XRGrabInteractable
     #endregion
 
     #region _OVERRIDE FUNCTION
-    [System.Obsolete]
+    //[System.Obsolete]
     protected override void OnSelectEntered(XRBaseInteractor interactor)
     {
         photonView.RequestOwnership();
